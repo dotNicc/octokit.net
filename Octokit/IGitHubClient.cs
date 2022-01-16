@@ -37,6 +37,14 @@ namespace Octokit
         /// Refer to the API documentation for more information: https://developer.github.com/v3/activity/
         /// </remarks>
         IActivitiesClient Activity { get; }
+        
+        /// <summary>
+        /// Access GitHub's Actions API.
+        /// </summary>
+        /// <remarks>
+        /// Refer to the API documentation for more information: https://developer.github.com/v3/actions/
+        /// </remarks>
+        IActionsClient Actions { get; }
 
         /// <summary>
         /// Access GitHub's Application API.

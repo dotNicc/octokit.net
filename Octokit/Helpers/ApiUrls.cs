@@ -807,6 +807,17 @@ namespace Octokit
         {
             return "repos/{0}/{1}/events".FormatUri(owner, name);
         }
+        
+        /// <summary>
+        /// Returns the <see cref="Uri"/> that returns the workflow runs info for the specified repository.
+        /// </summary>
+        /// <param name="owner">The owner of the repository</param>
+        /// <param name="name">The name of the repository</param>
+        /// <returns></returns>
+        public static Uri WorkflowRuns(string owner, string name)
+        {
+            return "repos/{0}/{1}/actions/runs".FormatUri(owner, name);
+        }
 
         /// <summary>
         /// Returns the <see cref="Uri"/> that returns the issue/pull request event info for the specified issue.

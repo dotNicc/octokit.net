@@ -95,6 +95,7 @@ namespace Octokit
             Connection = connection;
             var apiConnection = new ApiConnection(connection);
             Activity = new ActivitiesClient(apiConnection);
+            Actions = new ActionsClient(apiConnection);
             Authorization = new AuthorizationsClient(apiConnection);
             Enterprise = new EnterpriseClient(apiConnection);
             Gist = new GistsClient(apiConnection);
@@ -184,6 +185,14 @@ namespace Octokit
         /// Refer to the API documentation for more information: https://developer.github.com/v3/activity/
         /// </remarks>
         public IActivitiesClient Activity { get; private set; }
+        
+        /// <summary>
+        /// Access GitHub's Actions API.
+        /// </summary>
+        /// <remarks>
+        /// Refer to the API documentation for more information: https://developer.github.com/v3/actions/
+        /// </remarks>
+        public IActionsClient Actions { get; private set; }
 
         /// <summary>
         /// Access GitHub's Issue API.
